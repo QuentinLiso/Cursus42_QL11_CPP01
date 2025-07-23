@@ -6,7 +6,7 @@
 /*   By: qliso <qliso@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 18:25:31 by qliso             #+#    #+#             */
-/*   Updated: 2025/03/09 18:30:05 by qliso            ###   ########.fr       */
+/*   Updated: 2025/04/07 14:14:28 by qliso            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int main(void)
     delete zombie1;
     randomChump("Harvey");
     
-    return (EXIT_SUCCESS);
+    return (0);
 }

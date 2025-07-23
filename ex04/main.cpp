@@ -6,7 +6,7 @@
 /*   By: qliso <qliso@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 19:18:14 by qliso             #+#    #+#             */
-/*   Updated: 2025/03/10 20:33:11 by qliso            ###   ########.fr       */
+/*   Updated: 2025/04/07 14:24:49 by qliso            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,33 +22,34 @@ int main(int ac, char **av)
     if (ac != 4)
     {
         std::cerr << "Wrong number of arguments, format should be ./Sed s1 s2" << std::endl;
-        return (EXIT_FAILURE);
+        return (1);
     }
-    std::string     filename = av[1];
-    std::string     s1 = av[2];
-    std::string     s2 = av[3];
+    std::string     filename(av[1]);
+    std::string     s1(av[2]);
+    std::string     s2(av[3]);
 
     std::ifstream   ifs;
     std::ofstream   ofs;
 
     if (opening_files(ifs, ofs, filename))
-        return (EXIT_FAILURE);
+        return (1);
     fill_new_file(ifs, ofs, s1, s2);
 
     ifs.close();
     ofs.close();
-    return (EXIT_SUCCESS);
+    return (0);
 }
 
 int opening_files(std::ifstream &ifs, std::ofstream &ofs, std::string const &filename)
 {
-    ifs.open(filename);
+    ifs.open(filename.c_str());
     if (!ifs)
     {
         std::cerr << "Error while opening " + filename << std::endl;
         return (1);
     }
-    ofs.open(filename + ".replace");
+    std::string newfile(filename + ".replace");
+    ofs.open(newfile.c_str());
     if (!ofs)
     {
         std::cerr << "Error while opening " + filename + ".replace" << std::endl;

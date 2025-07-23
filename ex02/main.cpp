@@ -6,7 +6,7 @@
 /*   By: qliso <qliso@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 18:49:46 by qliso             #+#    #+#             */
-/*   Updated: 2025/03/09 18:56:32 by qliso            ###   ########.fr       */
+/*   Updated: 2025/04/07 14:19:32 by qliso            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int main(void)
     std::cout << "Value of brain  : " << brain << std::endl;
     std::cout << "Value pointed to by stringPTR : " << *stringPTR << std::endl;
     std::cout << "Value pointed to by stringREF : " << stringREF << std::endl;
-    return (EXIT_SUCCESS);
+    return (0);
 }

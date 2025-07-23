@@ -6,7 +6,7 @@
 /*   By: qliso <qliso@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 18:41:05 by qliso             #+#    #+#             */
-/*   Updated: 2025/03/09 18:47:32 by qliso            ###   ########.fr       */
+/*   Updated: 2025/04/07 14:19:23 by qliso            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int main(void)
     while (++i < n)
         zombies[i].announce();
     delete [] zombies;
-    return (EXIT_SUCCESS);
+    return (0);
 }
